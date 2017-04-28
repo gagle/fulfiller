@@ -1,0 +1,52 @@
+{
+  "name": "fulfiller",
+  "version": "0.1.0",
+  "description": "Always return a promise",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "module": "es/index.js",
+  "scripts": {
+    "prebuild": "npm run clean:build",
+    "build": "gulp build",
+    "clean": "npm run clean:build",
+    "clean:build": "gulp clean",
+    "lint": "tslint src/**/*.ts test/**/*.ts",
+    "test": "npm run lint && npm run test:unit",
+    "test:unit:ci": "mocha test/**/*.spec.js",
+    "pretest:unit": "npm run clean:build",
+    "test:unit": "mocha test/**/*.spec.ts --compilers ts:ts-node/register",
+    "pretest:ci": "npm run build",
+    "test:ci": "npm run lint && npm run test:unit:ci",
+    "precommit": "lint-staged",
+    "prepublish": "not-in-install && npm test || in-install",
+    "prepush": "npm test"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gagle/tagged-event-proxy.git"
+  },
+  "engines": {
+    "node": ">=6.9"
+  },
+  "author": "Gabriel Llamas",
+  "devDependencies": {
+    "@types/chai": "3.5.1",
+    "@types/mocha": "2.2.41",
+    "@types/node": "7.0.14",
+    "chai": "3.5.0",
+    "del": "2.2.2",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-typescript": "3.1.6",
+    "husky": "0.13.3",
+    "in-publish": "2.0.0",
+    "lint-staged": "3.4.0",
+    "mocha": "3.3.0",
+    "ts-node": "3.0.2",
+    "tslint": "5.1.0",
+    "typescript": "2.3.1"
+  },
+  "dependencies": {
+    "hoek": "4.1.1"
+  }
+}
