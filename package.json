@@ -4,7 +4,6 @@
   "description": "Always return a promise",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
-  "module": "es/index.js",
   "scripts": {
     "prebuild": "npm run clean:build",
     "build": "gulp build",
