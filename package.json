@@ -1,7 +1,7 @@
 {
   "name": "fulfiller",
   "version": "0.2.0",
-  "description": "Always return a promise",
+  "description": "Always return a Promise",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
