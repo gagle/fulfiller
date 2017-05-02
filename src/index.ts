@@ -1,4 +1,5 @@
-export default function(fn: (...args: any[]) => any): (...args: any[]) => any {
+export default function(fn?: (...args: any[]) => any): (...args: any[]) => any {
+  if (!fn) return () => Promise.resolve();
   // tslint:disable-next-line:only-arrow-functions
   const pfn = async function(this: any, ...args: any[]): Promise<any> {
     return fn.apply(this, args);

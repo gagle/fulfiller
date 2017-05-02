@@ -8,6 +8,8 @@
 $ npm install fulfiller
 ```
 
+Utility that makes a function return a Promise. If no function is provided it always returns a resolved Promise.
+
 ```typescript
 import fulfiller from 'fulfiller';
 

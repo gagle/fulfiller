@@ -68,4 +68,15 @@ describe('fulfiller()', () => {
 
     expect(pfn.name).to.equal('fn');
   });
+
+  it('returns a resolved promise when no parameter is provided', async () => {
+    const pfn = fulfiller();
+    const p = pfn('foo');
+
+    expect(pfn).to.be.a('function');
+    expect(p).to.be.a('promise');
+
+    const result = await p;
+    expect(result).to.be.an('undefined');
+  });
 });
