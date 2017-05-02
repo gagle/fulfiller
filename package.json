@@ -30,20 +30,20 @@
   },
   "author": "Gabriel Llamas",
   "devDependencies": {
-    "@types/chai": "3.5.1",
+    "@types/chai": "3.5.2",
     "@types/mocha": "2.2.41",
-    "@types/node": "7.0.14",
+    "@types/node": "7.0.15",
     "chai": "3.5.0",
     "del": "2.2.2",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-typescript": "3.1.6",
     "husky": "0.13.3",
     "in-publish": "2.0.0",
-    "lint-staged": "3.4.0",
+    "lint-staged": "3.4.1",
     "mocha": "3.3.0",
     "ts-node": "3.0.2",
     "tslint": "5.1.0",
-    "typescript": "2.3.1"
+    "typescript": "2.3.2"
   },
   "dependencies": {
     "hoek": "4.1.1"
