@@ -1,4 +1,4 @@
-export default function<T>(
+export default function<T = any>(
   fn?: (...args: any[]) => T
 ): (...args: any[]) => Promise<T> {
   if (!fn) return () => Promise.resolve() as Promise<T>;
